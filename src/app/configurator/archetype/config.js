@@ -58,6 +58,15 @@ export const Archetype = {
           },
           length: 3,
         },
+        chube_compact: {
+          label: 'Chube - Compact',
+          files: {
+            generic: {
+              _: 'Archetype Core/Hotend Mounts/chube_compact_mount'
+            },
+          },
+          length: 3,
+        },
         goliath: {
           label: 'Vz Goliath',
           files: {
@@ -137,24 +146,30 @@ export const Archetype = {
           label: 'Blackbird',
           files: {
             generic: {
-              cover: 'Archetype - Blackbird/[a]_blackbird_fan_cover',
+              cover: 'Archetype - Blackbird/Fan Covers/[a]_blackbird_fan_cover',
             },
             lengths: {
+              long: {
+                left: 'Archetype - Blackbird/Long/blackbird_long_left',
+                left_rear: 'Archetype - Blackbird/Long/blackbird_long_left_rear',
+                right: 'Archetype - Blackbird/Long/blackbird_long_right',
+                right_rear: 'Archetype - Blackbird/Long/blackbird_long_right_rear',
+              },
               medium: {
-                left: 'Archetype - Blackbird/medium/blackbird_medium_left',
-                left_rear: 'Archetype - Blackbird/medium/blackbird_medium_left_rear',
-                right: 'Archetype - Blackbird/medium/blackbird_medium_right',
-                right_rear: 'Archetype - Blackbird/medium/blackbird_medium_right_rear',
+                left: 'Archetype - Blackbird/Medium/blackbird_medium_left',
+                left_rear: 'Archetype - Blackbird/Medium/blackbird_medium_left_rear',
+                right: 'Archetype - Blackbird/Medium/blackbird_medium_right',
+                right_rear: 'Archetype - Blackbird/Medium/blackbird_medium_right_rear',
               },
               short: {
-                left: 'Archetype - Blackbird/short/blackbird_short_left',
-                left_rear: 'Archetype - Blackbird/short/blackbird_short_left_rear',
-                right: 'Archetype - Blackbird/short/blackbird_short_right',
-                right_rear: 'Archetype - Blackbird/short/blackbird_short_right_rear',
+                left: 'Archetype - Blackbird/Short/blackbird_short_left',
+                left_rear: 'Archetype - Blackbird/Short/blackbird_short_left_rear',
+                right: 'Archetype - Blackbird/Short/blackbird_short_right',
+                right_rear: 'Archetype - Blackbird/Short/blackbird_short_right_rear',
               },
             }
           },
-          lengths: [1, 2],
+          lengths: [1, 2, 3],
           fitment: 1,
         },
         breakneck: {
@@ -165,9 +180,9 @@ export const Archetype = {
               adaptor: 'Archetype - Breakneck/removable_hose_attachment',
             },
             lengths: {
-              short: { _: 'Archetype - Breakneck/breakneck_short' },
-              medium: { _: 'Archetype - Breakneck/breakneck_medium' },
-              long: { _: 'Archetype - Breakneck/breakneck_long' },
+              short: { _: 'Archetype - Breakneck/Short/breakneck_short' },
+              medium: { _: 'Archetype - Breakneck/Medium/breakneck_medium' },
+              long: { _: 'Archetype - Breakneck/Long/breakneck_long' },
             },
           },
           lengths: [1, 2, 3],
@@ -192,16 +207,16 @@ export const Archetype = {
             },
             lengths: {
               short: {
-                left: 'Archetype - Mjolnir/mjolnir_medium_left',
-                right: 'Archetype - Mjolnir/mjolnir_medium_right',
+                left: 'Archetype - Mjolnir/Medium/mjolnir_medium_left',
+                right: 'Archetype - Mjolnir/Medium/mjolnir_medium_right',
               },
               medium: {
-                left: 'Archetype - Mjolnir/mjolnir_long_left',
-                right: 'Archetype - Mjolnir/mjolnir_long_right',
+                left: 'Archetype - Mjolnir/Long/mjolnir_long_left',
+                right: 'Archetype - Mjolnir/Long/mjolnir_long_right',
               },
               long: {
-                left: 'Archetype - Mjolnir/mjolnir_long_left',
-                right: 'Archetype - Mjolnir/mjolnir_long_right',
+                left: 'Archetype - Mjolnir/Long/mjolnir_long_left',
+                right: 'Archetype - Mjolnir/Long/mjolnir_long_right',
               },
             },
           },
@@ -212,7 +227,9 @@ export const Archetype = {
         zephyr: {
           label: 'Zephyr',
           files: {
-            generic: {},
+            generic: {
+              cover: 'Archetype - Zephyr/Fan Covers/[a]_zephyr_fan_cover',
+            },
             lengths: {
               short: {
                 left: 'Archetype - Zephyr/Short/zephyr_short_left',
@@ -241,7 +258,8 @@ export const Archetype = {
           label: 'Annex Sherpa Micro - Micro-bowden',
           files: {
             generic: {
-              _: 'Archetype Core/Extruders/Breakneck Blocks/[a]_microbowden_micro-sherpa' },
+              _: 'Archetype Core/Extruders/Breakneck Blocks/[a]_microbowden_micro-sherpa',
+              rear_bar: 'Archetype Core/rear_extruder_bar' },
             },
           fitments: [1, 2],
         },
@@ -249,7 +267,8 @@ export const Archetype = {
           label: 'Annex Sherpa Mini - Flat-top',
           files: {
             generic: {
-              _: 'Archetype Core/Extruders/[a]_flat_sherpa_mini' },
+              _: 'Archetype Core/Extruders/[a]_flat_sherpa_mini',
+              rear_bar: 'Archetype Core/rear_extruder_bar' },
             },
           fitments: [1],
         },
@@ -257,7 +276,8 @@ export const Archetype = {
           label: 'Orbiter 2 - Micro-bowden',
           files: {
             generic: {
-              _: 'Archetype Core/Extruders/Breakneck Blocks/[a]_microbowden_orbiter2' },
+              _: 'Archetype Core/Extruders/Breakneck Blocks/[a]_microbowden_orbiter2',
+              rear_bar: 'Archetype Core/rear_extruder_bar' },
             },
           fitments: [1, 2],
         },
@@ -281,7 +301,8 @@ export const Archetype = {
           label: 'Bowden',
           files: {
             generic: {
-              _: 'Archetype Core/Extruders/[a]_bowden' },
+              _: 'Archetype Core/Extruders/[a]_bowden',
+              rear_bar: 'Archetype Core/rear_extruder_bar' },
             },
           fitments: [1, 2],
         },
@@ -289,7 +310,8 @@ export const Archetype = {
           label: 'Vz Hex. Breakneck - Micro-bowden',
           files: {
             generic: {
-              _: 'Archetype Core/Extruders/Breakneck Blocks/[a]_microbowden_vz-hextrudort' },
+              _: 'Archetype Core/Extruders/Breakneck Blocks/[a]_microbowden_vz-hextrudort',
+              rear_bar: 'Archetype Core/rear_extruder_bar' },
             },
           fitments: [1, 2],
         },
@@ -297,7 +319,8 @@ export const Archetype = {
           label: 'Vz Hextrudort - Flat-top',
           files: {
             generic: {
-              _: 'Archetype Core/Extruders/[a]_flat_vz-hextrudort' },
+              _: 'Archetype Core/Extruders/[a]_flat_vz-hextrudort',
+              rear_bar: 'Archetype Core/rear_extruder_bar' },
             },
           fitments: [1],
         },
@@ -355,6 +378,7 @@ export const Archetype = {
             spacer: {
               generic: {
                 spacer: 'Archetype Core/Probes/[a]_fan_splitter_spacer',
+                spacer_bottom: 'Archetype Core/Probes/[a]_fan_splitter_spacer_bottom_rail',
               },
             },
           },
