@@ -1,5 +1,8 @@
 import withMarkdoc from '@markdoc/next.js';
-import withSearch from './src/markdoc/search.mjs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,6 +13,5 @@ const nextConfig = {
   // assetPrefix: 'https://docs.armchairheavyindustries.com',
 };
 
-export default withSearch(
-  withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig),
-);
+
+export default withMarkdoc({ schemaPath: './src/markdoc', nextjsExports: [], dir: __dirname })(nextConfig);
